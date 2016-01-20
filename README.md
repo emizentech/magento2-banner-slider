@@ -1,5 +1,16 @@
 # magento2-banner-slider
 
+<h3>Features:</h3>
+<ul>
+<li>Widget : Can insert anywhere in magento via Widget</li>
+<li>Responsive Banner Slider</li>
+<li>jQuery</li>
+<li>Has Option to fix width</li>
+<li>Can Add any number of Slider Images</li>
+<li>Can Assign External Links</li>
+<li>Option to Assign Target (Self / New Page)</li>
+</ul>
+
 <h2>Composer Installation Instructions</h2>
 Add GIT Repository to composer
 <pre>
