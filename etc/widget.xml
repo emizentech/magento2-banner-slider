@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Magento/Widget/etc/widget.xsd">
+        <widget id="emizentech_bannerslider" class="Emizentech\Banner\Block\Widget\BannerSlider">
+                <label translate="true">Banner Slider</label>
+                <description>Insert Banner Slider by Group</description>
+                <parameters>
+                	<parameter name="group" xsi:type="select" required="true" visible="true"
+                		source_model="Emizentech\Banner\Model\Config\BannerGroups">
+						<label translate="true">Group</label>
+						<description translate="true">All banner images will be included from Selected Group.</description>
+					</parameter>
+                    <parameter name="sliderwidth" xsi:type="text"  visible="true" sort_order="2" value="250">
+						<label translate="true">Slider Width</label>
+						<description translate="true"><strong>Only Enter in case you want fixed Width Sider</strong>Enter Slider width Ex. 250 , do not suffix with px</description>
+                    </parameter>
+                </parameters>
+        </widget>
+</widgets>

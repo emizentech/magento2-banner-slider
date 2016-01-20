@@ -1,0 +1,47 @@
+.bannerslider { margin: 0 auto; }
+.bannerslider .slides {
+	display: block;
+	position: relative;
+	overflow: hidden;
+	padding: 0;
+}
+.bannerslider .slides li {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+.bannerslider .slides li img {
+	display: block;
+	width: 100%;
+	max-width: none;
+}
+.bannerslider .slides li.active { display: block; position: relative; }
+.bannerslider .crop li img { width: auto; }
+
+.bannerslider .pager {
+	height: 40px;
+	text-align: center;
+}
+.bannerslider .pager li { display: inline-block; }
+.bannerslider .pager li a,
+.bannerslider .pager li a span {
+	display: block;
+	height: 4px;
+	width: 4px;
+}
+.bannerslider .pager li a {
+	padding: 18px 8px;
+-webkit-border-radius: 6px;
+   -moz-border-radius: 6px;
+	border-radius: 6px;
+}
+.bannerslider .pager li a span {
+	overflow: hidden;
+	background: #c0c0c0;
+	text-indent: -9999px;
+-webkit-border-radius: 2px;
+   -moz-border-radius: 2px;
+	border-radius: 2px;
+}
+.bannerslider .pager li.active a span { background: #404040; }

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/menu.xsd">
+    <menu>
+        <add id="Emizentech_Banner::emizentech" title="Emizentech Main" module="Emizentech_Banner" sortOrder="100" resource="Emizentech_Banner::banner"/>
+        <add id="Emizentech_Banner::banner" title="Emizentech banner" module="Emizentech_Banner" sortOrder="1" parent="Emizentech_Banner::emizentech" action="banner/banner" resource="Emizentech_Banner::banner"/>
+    </menu>
+</config>

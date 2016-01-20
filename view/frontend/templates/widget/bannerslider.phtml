@@ -1,0 +1,28 @@
+<?php
+	$bannerImages = $this->getBannerImages();
+	$media = $this->getImageMediaPath();
+	$width =  $this->getSliderwidth();
+?>
+<!-- bannerslider -->
+    <div class="bannerslider">
+      <ul class="slides">
+      <?php foreach($bannerImages as $image):?>
+        <li>        
+        <a href="<?=$image->getLink();?>" target="<?=$image->getTarget();?>">
+        <img src="<?=$media.$image->getImage();?>" alt="<?=$image->getTitle();?>" title="<?=$image->getTitle();?>" />
+        </a>
+        </li>
+        <?php endforeach;?>
+      </ul>
+    </div>
+<!-- bannerslider -->
+<script type="text/javascript">
+sh.noConflict();
+sh(document).ready(function() {
+	<?php if($width > 0):?>
+		sh('.bannerslider').css("width" , "<?php echo $width;?>px");
+	<?php endif;?>
+	sh('.bannerslider').bannerslider();
+});
+
+</script>
