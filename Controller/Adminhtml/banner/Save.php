@@ -60,7 +60,8 @@ class Save extends \Magento\Backend\App\Action
 //             var_dump($data);die;
 			if(isset($data['image']['delete']) && $data['image']['delete'] == '1')
 				$data['image'] = '';
-			
+			if(isset($data['image']['value']) && strlen($data['image']['value']) > 1)
+                         	$data['image'] = $data['image']['value'];
             $model->setData($data);
 
             try {
