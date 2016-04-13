@@ -144,53 +144,14 @@ class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
         return parent::_prepareColumns();
     }
 
-    /**
-     * @return $this
-     */
-    protected function _prepareMassaction()
-    {
-        $this->setMassactionIdField('banner_id');
-        $this->getMassactionBlock()->setTemplate('Emizentech_Banner::banner/grid/massaction_extended.phtml');
-        $this->getMassactionBlock()->setFormFieldName('banner');
-
-        $this->getMassactionBlock()->addItem(
-            'delete',
-            [
-                'label' => __('Delete'),
-                'url' => $this->getUrl('banner/*/massDelete'),
-                'confirm' => __('Are you sure?')
-            ]
-        );
-
-        $statuses = $this->_status->getOptionArray();
-
-        $this->getMassactionBlock()->addItem(
-            'status',
-            [
-                'label' => __('Change status'),
-                'url' => $this->getUrl('banner/*/massStatus', ['_current' => true]),
-                'additional' => [
-                    'visibility' => [
-                        'name' => 'status',
-                        'type' => 'select',
-                        'class' => 'required-entry',
-                        'label' => __('Status'),
-                        'values' => $statuses
-                    ]
-                ]
-            ]
-        );
-
-
-        return $this;
-    }
+   
 
     /**
      * @return string
      */
     public function getGridUrl()
     {
-        return $this->getUrl('banner/*/grid', ['_current' => true]);
+        return $this->getUrl('banner/*/index', ['_current' => true]);
     }
 
     /**
